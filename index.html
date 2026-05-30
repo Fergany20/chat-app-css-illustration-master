@@ -16,35 +16,79 @@
 </head>
 
 <body>
+  <main class="main">
+    <section class="main__header">
+      <div class="main__arrow"></div>
+      <div class="main__profile">
+        <div class="main__avater">
+          <img src="./images/avatar.jpg" alt="my picture">
+        </div>
+        <div class="main__info">
+          <h3 class="main__name">Samuel Green</h3>
+          <p class="main__status">Available to Walk</p>
+        </div>
+      </div>
+      <div class="main__settings">
+        <span class="main__dot"></span>
+        <span class="main__dot"></span>
+        <span class="main__dot"></span>
+      </div>
+    </section>
+    <!-- ================================ -->
+    <!-- messages -->
+    <!-- ================================ -->
+    <section class="main__massages">
+      <!-- ================================ -->
+      <!-- you chat -->
+      <div class="main__msg--outgoing">
+        <p class="main__msg--outgoing-p">That sounds great. I’d be happy with that.</p>
+        <p class="main__msg--outgoing-p"> Could you send over some pictures of your dog, please?</p>
+      </div>
 
-  Samuel Green
-  Available to Walk
+      <!-- ================================ -->
+      <!-- sender chat -->
+      <div class="main__msg--incoming">
+        <div class="main__msg--incoming-images">
+          <img src="images/dog-image.jpg" alt="dog image">
+          <img src="images/dog-image2.jpg" alt="dog image">
+          <img src="images/dog-image3.jpg" alt="dog image">
+        </div>
+        <p class="main__msg--incoming-p">Here are a few pictures. She’s a happy girl!</p>
+        <p class="main__msg--incoming-p">Can you make it?</p>
+      </div>
 
-  That sounds great. I’d be happy with that.
+      <!-- ================================ -->
+      <!-- you chat -->
+      <div class="main__msg--outgoing">
+        <p class="main__msg--outgoing-p">She looks so happy! The time we discussed works. How long shall I take her outfor?</p>
+        <div class="main__msg--outgoing-card">
+          <p>30 minute walk</p>
+          <p>$29</p>
+        </div>
+        <div class="main__msg--outgoing-card">
+          <p>1 hour walk</p>
+          <p>$49</p>
+        </div>
+      </div>
+    </section>
+    <!-- ================================ -->
+    <!-- footer -->
+    <!-- ================================ -->
+    <section class="main__footer">
+      <input type="text" class="main__input" name="chat" id="chat" placeholder="Type a message…">
+      <div class="main__send-btn"></div>
+    </section>
+  </main>
 
-  Could you send over some pictures of your dog, please?
 
-  Here are a few pictures. She’s a happy girl!
+  <aside class="aside">
+    <h2 class="aside__title">Simple booking</h2>
+    <p class="aside__text">Stay in touch with our dog walkers through the chat interface. This makes it easy to
+      discuss arrangements and make bookings. Once the walk has been completed you can rate
+      your walker and book again all through the chat.</p>
+  </aside>
 
-  Can you make it?
-
-  She looks so happy! The time we discussed works. How long shall I take her out for?
-
-  30 minute walk
-  $29
-
-  1 hour walk
-  $49
-
-  Type a message…
-
-  Simple booking
-
-  Stay in touch with our dog walkers through the chat interface. This makes it easy to
-  discuss arrangements and make bookings. Once the walk has been completed you can rate
-  your walker and book again all through the chat.
-
-  <footer class="attribution">
+  <footer class="CTA">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </footer>
