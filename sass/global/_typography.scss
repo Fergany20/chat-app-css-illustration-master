@@ -1,0 +1,33 @@
+@use "../utils/function" as *; // عشان نستخدم دالة rem() اللي عملناها
+
+a {
+    &, &:visited, &:hover, &:active {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+// ==========================================================================
+// Typography Design Tokens
+// ==========================================================================
+
+// 1. Font Families
+$ff-primary: 'Rubik', sans-serif; // Main font family used across the entire application
+
+// 2. Font Weights 
+$fw-light:   300; // Used for lighter, subtle subheadings or secondary texts
+$fw-regular: 400; // Default weight for standard body text and chat messages
+$fw-medium:  500; // Used for user profile names and important buttons
+$fw-bold:    700; // Used for main headings, section titles, and prominent UI highlights
+
+// 3. Dynamic Font Sizes (Fluid Typography using clamp)
+$fs-heading-xl: clamp(rem(32), 7vw, rem(56));   // Large hero titles or landing page main headlines
+$fs-heading-l:  clamp(rem(24), 5vw, rem(40));   // Standard section titles or main component headers
+$fs-heading-m:  clamp(rem(18), 3.5vw, rem(28)); // Small component headers (e.g., Active Chat Name)
+$fs-body-lead:  rem(18);                         // Standout body copy, intro paragraphs, or featured items
+$fs-body:       rem(16);                         // Standard baseline body text size for general reading
+$fs-body-sm:    rem(14);                         // Secondary texts, captions, or input field labels
+$fs-body-xs:    rem(11);                         // Micro-typography (e.g., chat timestamps, user active status)
+
+// 4. Line Heights 
+$lh-heading: 1.2; // Tighter line spacing for headings to prevent breaking awkwardly
+$lh-body:    1.6; // Generous line spacing for regular body text to improve readability
