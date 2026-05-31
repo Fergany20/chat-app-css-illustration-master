@@ -11,7 +11,6 @@ This is a solution to the [Chat app CSS illustration coding challenge on Fronten
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 
 ## Overview
@@ -29,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add your GitHub repository URL here](https://github.com/your-username/your-repo-name)
+- Solution URL: [Add your GitHub repository URL here](https://github.com/Fergany20/chat-app-css-illustration-master)
 - Live Site URL: [Add your live site URL here](https://your-username.github.io/your-repo-name)
 
 ## My process

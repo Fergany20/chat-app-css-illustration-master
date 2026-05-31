@@ -1,0 +1,428 @@
+a, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+body {
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  font-family: "Rubik", sans-serif;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  min-height: 100vh;
+  background-color: hsl(270, 20%, 96%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+body::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: -50%;
+  transform: translatex(0%);
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(to left, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+  border-radius: 0px 0 50% 50%;
+}
+@media (min-width: 1024px) {
+  body::before {
+    top: 0%;
+    left: -71%;
+    width: 100%;
+    height: 75%;
+  }
+}
+@media (min-width: 1440px) {
+  body::before {
+    top: 0%;
+    left: -15%;
+    width: 50%;
+    height: 85%;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+  position: relative;
+  gap: 8vw;
+  z-index: 1;
+  margin: 100px auto;
+}
+@media (min-width: 1024px) {
+  .container {
+    display: flex;
+    flex-flow: row;
+  }
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  gap: 1.25rem;
+  max-width: 18.75rem;
+  background-color: hsl(270, 20%, 96%);
+  border: 10px solid hsl(0, 100%, 100%);
+  border-radius: 25px;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  padding-bottom: 0.625rem;
+}
+.main::before {
+  content: "";
+  position: absolute;
+  top: -1%;
+  left: 50%;
+  transform: translatex(-50%);
+  width: 40%;
+  height: 3%;
+  background-color: hsl(0, 100%, 100%);
+  border-radius: 0 0 0.625rem 0.625rem;
+}
+.main__header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: linear-gradient(to right, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+  border-radius: 1.25rem;
+  padding: 0.625rem 1.25rem;
+}
+.main__arrow {
+  width: 0.9375rem;
+  height: 0.9375rem;
+  background-color: hsl(0, 100%, 100%);
+  transform: translateY(0) translateX(0) rotate(45deg);
+  position: relative;
+}
+.main__arrow::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-65%) translateX(-40%) rotate(0deg);
+  width: calc(100% + 0.0625rem);
+  height: calc(100% + 0.0625rem);
+  background-color: hsl(293.1, 91.7%, 57.3%);
+}
+.main__profile {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.625rem;
+  width: 10.625rem;
+}
+.main__avater {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid hsl(0, 100%, 100%);
+  border-radius: 50%;
+}
+.main__avater img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main__info {
+  display: flex;
+  flex-flow: column;
+  gap: 0.3125rem;
+}
+.main__name {
+  color: hsl(0, 100%, 100%);
+  font-size: 0.875rem;
+}
+.main__status {
+  color: hsl(270, 7%, 64%);
+  font-size: 0.6875rem;
+}
+.main__settings {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 0.25rem;
+  width: 1.25rem;
+  height: 1.5625rem;
+  margin-left: 1.875rem;
+}
+.main__dot {
+  display: inline-block;
+  width: 0.25rem;
+  height: 0.25rem;
+  background-color: hsl(0, 100%, 100%);
+  border-radius: 50%;
+}
+.main__massages {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.25rem;
+  gap: 0.9375rem;
+}
+.main__msg--outgoing {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.625rem;
+}
+.main__msg--outgoing-p {
+  max-width: 75%;
+  font-size: 0.875rem;
+  font-weight: 400;
+  background-color: hsl(276, 100%, 90.2%);
+  color: hsl(276, 55%, 52%);
+  padding: 0.3125rem;
+  border-radius: 0.625rem 0.625rem 0.625rem 0.3125rem;
+  padding: 0.3125rem;
+}
+.main__msg--outgoing-card {
+  max-width: 75%;
+  background: linear-gradient(to right, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+  border-radius: 0.625rem 0.625rem 0.625rem 0.3125rem;
+  padding: 0.3125rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.625rem;
+}
+.main__msg--outgoing-p_bold-card {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: hsl(0, 100%, 100%);
+  padding: 0.3125rem;
+}
+.main__plan {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 0.9375rem;
+  height: 0.9375rem;
+  border-radius: 50%;
+  border: 1px solid hsl(289, 100%, 72%);
+  outline: none;
+  cursor: pointer;
+  accent-color: hsl(293, 100%, 63%);
+}
+.main__plan:checked {
+  border-color: hsl(0, 100%, 100%);
+}
+.main__msg--outgoing-p-card {
+  font-size: 0.6875rem;
+  font-weight: 400;
+  color: hsl(0, 100%, 100%);
+  padding: 0.3125rem;
+}
+.main__msg--incoming {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.625rem;
+}
+.main__msg--incoming-p {
+  max-width: 75%;
+  font-size: 0.875rem;
+  font-weight: 300;
+  background-color: hsl(0, 100%, 100%);
+  color: hsl(270, 7%, 64%);
+  padding: 0.3125rem;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  border-radius: 0.625rem 0.625rem 0.3125rem 0.625rem;
+}
+.main__msg--incoming-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3125rem;
+  max-width: 75%;
+}
+.main__msg--incoming-images img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.625rem;
+}
+.main__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  padding: 0.625rem 1.25rem;
+  background-color: hsl(0, 100%, 100%);
+  border-radius: 1.5625rem;
+}
+.main__input {
+  width: 12.5rem;
+  padding: 0.3125rem;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: hsl(270, 7%, 64%);
+}
+.main__input::-moz-placeholder {
+  color: hsl(206, 6%, 79%);
+}
+.main__input::placeholder {
+  color: hsl(206, 6%, 79%);
+}
+.main__send-btn {
+  width: 1.875rem;
+  height: 1.875rem;
+  background-color: hsl(271, 36%, 24%);
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.main__send-btn:hover, .main__send-btn:hover::after {
+  background-color: hsl(276, 55%, 52%);
+}
+.main__send-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translatex(-50%) translateY(-50%) rotate(45deg);
+  width: 30%;
+  height: 30%;
+  background-color: hsl(0, 100%, 100%);
+  z-index: 1;
+}
+.main__send-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translatex(-65%) translateY(-50%) rotate(45deg);
+  width: 30%;
+  height: 30%;
+  background-color: hsl(271, 36%, 24%);
+  z-index: 1;
+}
+
+.aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  gap: 1.25rem;
+  max-width: clamp(18.75rem, 80vw, 31.25rem);
+}
+.aside__title {
+  color: hsl(271, 36%, 24%);
+  font-size: clamp(2rem, 7vw, 3.5rem);
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-align: flex-start;
+}
+.aside__text {
+  color: hsl(270, 7%, 64%);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .aside {
+    max-width: clamp(18.75rem, 30vw, 50rem);
+  }
+  .aside__title {
+    color: hsl(271, 36%, 24%);
+    font-size: clamp(2rem, 7vw, 3.5rem);
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-right: auto;
+  }
+  .aside__text {
+    color: hsl(270, 7%, 64%);
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: start;
+  }
+}/*# sourceMappingURL=style.css.map */
