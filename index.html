@@ -16,82 +16,83 @@
 </head>
 
 <body>
-  <main class="main">
-    <section class="main__header">
-      <div class="main__arrow"></div>
-      <div class="main__profile">
-        <div class="main__avater">
-          <img src="./images/avatar.jpg" alt="my picture">
+  <div class="container" aria-label="content of illustration">
+    <main class="main">
+      <section class="main__header" aria-label="header of chat">
+        <div class="main__arrow" aria-label="back"></div>
+        <div class="main__profile" aria-label="person">
+          <div class="main__avater" aria-label="my picture">
+            <img src="./images/avatar.jpg" alt="my picture">
+          </div>
+          <div class="main__info">
+            <h3 class="main__name" aria-label="name of person">Samuel Green</h3>
+            <p class="main__status" aria-label="status of person">Available to Walk</p>
+          </div>
         </div>
-        <div class="main__info">
-          <h3 class="main__name">Samuel Green</h3>
-          <p class="main__status">Available to Walk</p>
+        <div class="main__settings">
+          <span class="main__dot"></span>
+          <span class="main__dot"></span>
+          <span class="main__dot"></span>
         </div>
-      </div>
-      <div class="main__settings">
-        <span class="main__dot"></span>
-        <span class="main__dot"></span>
-        <span class="main__dot"></span>
-      </div>
-    </section>
-    <!-- ================================ -->
-    <!-- messages -->
-    <!-- ================================ -->
-    <section class="main__massages">
+      </section>
       <!-- ================================ -->
-      <!-- you chat -->
-      <div class="main__msg--outgoing">
-        <p class="main__msg--outgoing-p">That sounds great. I’d be happy with that.</p>
-        <p class="main__msg--outgoing-p"> Could you send over some pictures of your dog, please?</p>
-      </div>
-
+      <!-- messages -->
       <!-- ================================ -->
-      <!-- sender chat -->
-      <div class="main__msg--incoming">
-        <div class="main__msg--incoming-images">
-          <img src="images/dog-image.jpg" alt="dog image">
-          <img src="images/dog-image2.jpg" alt="dog image">
-          <img src="images/dog-image3.jpg" alt="dog image">
+      <section class="main__massages" aria-label="messages">
+        <!-- ================================ -->
+        <!-- you chat -->
+        <div class="main__msg--outgoing">
+          <p class="main__msg--outgoing-p" aria-label="message">That sounds great. I’d be happy with that.</p>
+          <p class="main__msg--outgoing-p" aria-label="message"> Could you send over some pictures of your dog, please?</p>
         </div>
-        <p class="main__msg--incoming-p">Here are a few pictures. She’s a happy girl!</p>
-        <p class="main__msg--incoming-p">Can you make it?</p>
-      </div>
 
+        <!-- ================================ -->
+        <!-- sender chat -->
+        <div class="main__msg--incoming" aria-label="recived message">
+          <div class="main__msg--incoming-images">
+            <img src="./images/dog-image-1.jpg" alt="dog image">
+            <img src="./images/dog-image-2.jpg" alt="dog image">
+            <img src="./images/dog-image-3.jpg" alt="dog image">
+          </div>
+          <p class="main__msg--incoming-p" aria-label="message">Here are a few pictures. She’s a happy girl!</p>
+          <p class="main__msg--incoming-p" aria-label="message">Can you make it?</p>
+        </div>
+
+        <!-- ================================ -->
+        <!-- you chat -->
+        <div class="main__msg--outgoing" aria-label="sent message">
+          <p class="main__msg--outgoing-p" aria-label="message">She looks so happy! The time we discussed works. How long shall I take her
+            outfor?</p>
+          <label for="plan1" class="main__msg--outgoing-card" aria-label="message">
+
+            <input type="radio" name="plan" id="plan1" class="main__plan">
+            <p class="main__msg--outgoing-p-card" aria-label="message">30 minute walk</p>
+            <p class="main__msg--outgoing-p_bold-card" aria-label="message">$29</p>
+
+          </label>
+          <label for="plan2" class="main__msg--outgoing-card" aria-label="message">
+            <input type="radio" name="plan" id="plan2" class="main__plan">
+            <p class="main__msg--outgoing-p-card" aria-label="message">1 hour walk</p>
+            <p class="main__msg--outgoing-p_bold-card" aria-label="message">$49</p>
+          </label>
+        </div>
+      </section>
       <!-- ================================ -->
-      <!-- you chat -->
-      <div class="main__msg--outgoing">
-        <p class="main__msg--outgoing-p">She looks so happy! The time we discussed works. How long shall I take her outfor?</p>
-        <div class="main__msg--outgoing-card">
-          <p>30 minute walk</p>
-          <p>$29</p>
-        </div>
-        <div class="main__msg--outgoing-card">
-          <p>1 hour walk</p>
-          <p>$49</p>
-        </div>
-      </div>
-    </section>
-    <!-- ================================ -->
-    <!-- footer -->
-    <!-- ================================ -->
-    <section class="main__footer">
-      <input type="text" class="main__input" name="chat" id="chat" placeholder="Type a message…">
-      <div class="main__send-btn"></div>
-    </section>
-  </main>
+      <!-- footer -->
+      <!-- ================================ -->
+      <section class="main__footer" aria-label="footer of chat">
+        <input type="text" class="main__input" name="chat" id="chat" placeholder="Type a message…">
+        <div class="main__send-btn" aria-label="send message"></div>
+      </section>
+    </main>
 
 
-  <aside class="aside">
-    <h2 class="aside__title">Simple booking</h2>
-    <p class="aside__text">Stay in touch with our dog walkers through the chat interface. This makes it easy to
-      discuss arrangements and make bookings. Once the walk has been completed you can rate
-      your walker and book again all through the chat.</p>
-  </aside>
-
-  <footer class="CTA">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
+    <aside class="aside" aria-label="content of illustration">
+      <h2 class="aside__title" aria-label="title of illustration">Simple booking</h2>
+      <p class="aside__text" aria-label="description of illustration">Stay in touch with our dog walkers through the chat interface. This makes it easy to
+        discuss arrangements and make bookings. Once the walk has been completed you can rate
+        your walker and book again all through the chat.</p>
+    </aside>
 </body>
 
 </html>

@@ -1,0 +1,50 @@
+@use '../utils/function' as *;
+@use '../utils/mixin' as *;
+@use '../global/' as *;
+
+.aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    gap: rem(20);
+    max-width: clamp(rem(300), 80vw, rem(500));
+
+
+    &__title {
+        color: $color-Purple-950;
+        font-size: $fs-heading-xl ;
+        font-weight: $fw-medium;
+        letter-spacing: 2px;
+        text-align: flex-start;
+
+    }
+
+    &__text {
+        color: $color-Gray-500;
+        font-size: $fs-body-lead;
+        font-weight: $fw-regular;
+        line-height: $lh-body ;
+        text-align: center;
+    }
+
+    @include breakpoints(sm-desktop) {
+        max-width: clamp(rem(300), 30vw, rem(800));
+
+        &__title {
+            color: $color-Purple-950;
+            font-size: $fs-heading-xl ;
+            font-weight: $fw-medium;
+            letter-spacing: 2px;
+            margin-right: auto;
+        }
+
+        &__text {
+            color: $color-Gray-500;
+            font-size: $fs-body-lead;
+            font-weight: $fw-regular;
+            line-height: $lh-body ;
+            text-align: start;
+        }
+    }
+}

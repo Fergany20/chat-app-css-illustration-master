@@ -1,8 +1,8 @@
-@use 'sass:math';
+@use "sass:math";
 
 @function rem($pixels){
     @if math.is-unitless($pixels){
-        @return math.div($pixels,16px) + rem;
+        @return math.div($pixels, 16) * 1rem; 
     }
     @else{
         @error 'Error: the pixel is not unitless. It should be a unitless number: ' + $pixels;
@@ -10,7 +10,7 @@
 }
 @function em($pixels){
     @if math.is-unitless($pixels){
-        @return math.div($pixels,16px) + em;
+        @return math.div($pixels, 16) * 1em;
     }
     @else{
         @error 'Error: the pixel is not unitless. It should be a unitless number: ' + $pixels;
