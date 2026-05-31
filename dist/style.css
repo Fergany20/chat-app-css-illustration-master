@@ -322,8 +322,8 @@ body::before {
   max-width: 75%;
 }
 .main__msg--incoming-images img {
-  width: 3.4375rem;
-  height: 3.4375rem;
+  width: 50px;
+  height: 50px;
   border-radius: 0.625rem;
 }
 .main__footer {
